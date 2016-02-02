@@ -17,6 +17,8 @@ Gem::Specification.new do |spec|
   spec.summary = "Shell commands for development, staging, and production parity."
   spec.version = Parity::VERSION
 
+  spec.post_install_message = File.read("UPGRADING")
+
   spec.add_dependency "git", "~> 1.2"
   spec.add_dependency "rake", "~> 10.4"
 end
