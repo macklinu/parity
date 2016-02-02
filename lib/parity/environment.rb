@@ -130,7 +130,9 @@ module Parity
     end
 
     def heroku_app_name
-      git_remote.split(":").last.split(".").first
+      git_remote.
+        split(/(\/|:)/).last.
+        split(".").first
     end
 
     def run_migrations?
